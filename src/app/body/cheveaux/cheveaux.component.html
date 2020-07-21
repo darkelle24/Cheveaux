@@ -1,0 +1,13 @@
+<div id="test">
+    <div id="project-list">
+        <h2>Liste des Projets</h2>
+        <div id="center">
+            <section>
+                <app-cheval @myInsertTrigger *ngFor="let projet of projet; let i = index" [title]="projet.name" [language]="projet.language" [link]="projet.html_url" [srcimage]="projet.srcimage" [description]="projet.description" [date]="projet.updated_at"></app-cheval>
+            </section>
+        </div>
+        <div id="search_group">
+            <input #search type="text" id="search" name="search" size="30" placeholder="Search a project" (keyup.enter)="onEnter(search)" (keyup)="onKey($event)" />
+        </div>
+    </div>
+</div>

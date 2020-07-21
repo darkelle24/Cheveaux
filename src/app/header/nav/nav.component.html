@@ -1,0 +1,25 @@
+<nav>
+    <ul class="menu-nav">
+        <li class="accueil">
+            <a routerLink="acceuil" routerLinkActive="activeacceuil">Accueil</a>
+        </li>
+        <li class="actualité">
+            <a routerLink="actualité" routerLinkActive="activeacceuil">Actualité</a>
+        </li>
+        <li class="menu-cheveaux">
+            <a routerLink="cheveaux" routerLinkActive="activecheveaux">Cheveaux</a>
+            <ul class="submenu" *ngIf="projets !== undefined">
+                <li *ngIf="projets.length >= 1"><a href={{projets[0].html_url}} target="_blank" rel="noopener" title="Github link: {{projets[0].html_url}}">{{projets[0].name}}</a></li>
+                <li *ngIf="projets.length >= 2"><a href={{projets[1].html_url}} target="_blank" rel="noopener" title="Github link: {{projets[1].html_url}}">{{projets[1].name}}</a></li>
+                <li *ngIf="projets.length >= 3"><a href={{projets[2].html_url}} target="_blank" rel="noopener" title="Github link: {{projets[2].html_url}}">{{projets[2].name}}</a></li>
+                <li *ngIf="projets.length >= 4"><a href={{projets[3].html_url}} target="_blank" rel="noopener" title="Github link: {{projets[3].html_url}}">{{projets[3].name}}</a></li>
+            </ul>
+        </li>
+        <li class="menu-me">
+            <a routerLink="info" routerLinkActive="activemenu">L'elevage</a>
+        </li>
+        <li class="contact">
+            <a routerLink="acceuil">Contact</a>
+        </li>
+    </ul>
+</nav>

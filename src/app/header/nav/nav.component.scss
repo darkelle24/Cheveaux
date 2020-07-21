@@ -1,0 +1,129 @@
+nav {
+    margin-top: 135px;
+    width: 100%;
+    left: 0;
+    background-color: #545a7d;
+    position: absolute;
+    top: 8px;
+}
+
+nav>ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav>ul>li {
+    float: left;
+    position: relative;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.submenu {
+    display: none;
+}
+
+nav li:hover .submenu {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 1000000;
+}
+
+nav>ul::after {
+    display: block;
+    clear: both;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav>ul>li>a {
+    padding: 20px 30px;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.submenu li {
+    border-bottom: 1px solid #CCC;
+}
+
+.submenu li a {
+    padding: 15px 30px;
+    font-size: 13px;
+    color: #6472ca;
+    width: 270px;
+}
+
+.accueil:hover {
+    border-top: 5px solid #e44d26;
+    background-color: rgba(228, 77, 38, 0.15);
+}
+
+.actualité:hover {
+    border-top: 5px solid #e44d26;
+    background-color: rgba(228, 77, 38, 0.15);
+}
+
+.menu-cheveaux:hover {
+    border-top: 5px solid #294c63;
+    background-color: rgba(000, 112, 192, 0.15);
+}
+
+.menu-me:hover {
+    border-top: 5px solid #7a6b05;
+    background-color: rgba(241, 211, 79, 0.15);
+}
+
+.contact:hover {
+    border-top: 5px solid #BBB;
+    background-color: rgba(220, 220, 220, 0.15);
+}
+
+nav>ul>li:hover a {
+    padding: 15px 30px 20px 30px;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-cheveaux .submenu {
+    background-color: #294c63
+}
+
+.menu-me .submenu {
+    background-color: #7a6b05
+}
+
+.submenu li:hover a {
+    color: #EEE;
+    font-weight: bold;
+}
+
+.menu-cheveaux .submenu li:hover {
+    background-color: rgb(000, 115, 200)
+}
+
+.menu-me .submenu li:hover {
+    background-color: rgb(200, 165, 75)
+}
+
+.activeacceuil {
+    background-color: rgba(228, 77, 38, 0.15);
+}
+
+.activecheveaux {
+    background-color: rgba(000, 112, 192, 0.15);
+}
+
+.activemenu {
+    background-color: rgba(241, 211, 79, 0.15);
+}

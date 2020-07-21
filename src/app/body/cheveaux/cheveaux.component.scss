@@ -1,0 +1,38 @@
+#project-list {
+    width: 100%;
+    left: 0px;
+    top: 154px;
+    position: absolute;
+    padding-bottom: 70px;
+}
+
+#project-list>h2 {
+    position: absolute;
+    left: 70px;
+    top: 15px;
+}
+
+#center {
+    position: absolute;
+    top: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#test {
+    position: relative;
+    min-height: 100%;
+}
+
+#search_group {
+    position: relative;
+    float: right;
+    top: 41px;
+    right: 45px;
+}
