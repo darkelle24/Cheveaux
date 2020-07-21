@@ -18,9 +18,9 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event: Event) => {
         if (event instanceof NavigationStart) {
           this.loading = true;
-          /* if (event.url.includes('acceuil')) {
-            document.body.style.backgroundColor = 'rgba(228, 77, 38, 0.15)';
-          } else if (event.url.includes('projet')) {
+          if (event.url.includes('acceuil')) {
+            document.body.style.backgroundColor = '#a5d152';
+          } /*else if (event.url.includes('projet')) {
             document.body.style.backgroundColor = 'rgba(71, 78, 144, 0.63)';
           } else if (event.url.includes('me')) {
             document.body.style.backgroundColor = 'rgb(59, 59, 59)';

@@ -1,7 +1,7 @@
 header {
     background-color: #545a7d;
     float: top;
-    height: 150px;
+    height: 210px;
     width: 100%;
     overflow: hidden;
     left: 0;
@@ -9,9 +9,29 @@ header {
     position: absolute;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 206px;
+    width: 100%;
+}
+
+.fill img {
+    object-fit: fill;
+    height: 206px;
+    width: 100%;
+}
+
+.text-block {
+    position: absolute;
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
 }
