@@ -8,12 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class ChevalComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() description: string;
-  @Input() language: string;
-  @Input() link: string;
+  @Input() name: string;
+  @Input() prixMin: number;
+  @Input() prixMax: number;
   @Input() srcimage: string;
-  @Input() date: string;
+  @Input() pereMere: string;
+  @Input() pere: string;
+  @Input() race: string;
+  @Input() robe: string;
+  @Input() sexe: string;
+  @Input() naissance: number;
 
   constructor() { }
 

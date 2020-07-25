@@ -37,15 +37,16 @@ import {
 export class CheveauxComponent implements OnInit {
 
   save: any[] = null;
-  projet: any[] = null;
+  chevaux: any[] = null;
 
   constructor(private projetService: ServiceAllService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.projetService.getProjectObserval()
+    this.projetService.getAllChevaux()
       .subscribe(
         (data: any) => {
-          this.projet = data;
+          this.chevaux = data;
+          console.log(data);
           this.save = data;
         },
         (err: any) => console.log('error :' + err)
@@ -57,6 +58,6 @@ export class CheveauxComponent implements OnInit {
   }
 
   onKey(event: any) {
-    this.projet = this.save.filter(project => project.name.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1);
+    // this.projet = this.save.filter(project => project.name.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1);
   }
 }

@@ -12,6 +12,6 @@ export class ProjectsResolverService implements Resolve<any> {
   constructor(private projetService: ServiceAllService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
-    return this.projetService.getProjectObserval();
+    return this.projetService.getAllChevaux();
   }
 }

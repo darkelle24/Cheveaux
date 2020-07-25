@@ -39,15 +39,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getAllProject()
-      .subscribe(
-        (data: any) => {
-          console.log(data);
-          this.service.projets.next(data);
-        },
-        (err: any) => console.log('error :' + err),
-        () => console.log('done data querry')
-      );
   }
 }
 

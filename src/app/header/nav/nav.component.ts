@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
   constructor(private projetService: ServiceAllService) { }
 
   ngOnInit() {
-    this.projetService.getProjectObserval()
+    this.projetService.getAllChevaux()
       .subscribe(
         (data: any) => {
           this.projets = data;

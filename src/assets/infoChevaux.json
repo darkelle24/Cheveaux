@@ -1,0 +1,16 @@
+[{
+    "name": "LOL",
+    "pere": "TROLL",
+    "pereMere": "lol",
+    "naissance": 1000,
+    "race": "dqqd",
+    "robe": "bleu",
+    "sexe": "Male",
+    "prixMin": 12000,
+    "prixMax": 24000
+}, {
+    "name": "DAB",
+    "prixMin": 12000,
+    "prixMax": 24000,
+    "srcimage": "assets/img/test.jpg"
+}]
