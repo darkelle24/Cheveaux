@@ -1,0 +1,80 @@
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    color: #23e06b;
+}
+
+.sous_titre {
+    font-style: italic;
+}
+
+img {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    border-style: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.origines {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.encadreChevalFiche {
+    border: 1px solid #e0dee7;
+    margin: 30px 0;
+}
+
+.encadreChevalFiche h2.title {
+    color: #2e374d;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background: #fff;
+    padding: 5px;
+}
+
+.encadreChevalFiche p {
+    color: #77788d;
+}
+
+#pedigree table {
+    width: 100%;
+}
+
+#pedigree table {
+    margin: 0;
+}
+
+#pedigree {
+    background: #f6f5fb;
+    border-left: 1px solid #e0dee7;
+    border-right: 1px solid #e0dee7;
+    border-bottom: 1px solid #e0dee7;
+}
+
+#pedigree table td {
+    border-bottom: 1px solid #e0dee7;
+    padding: 8px 0;
+}
+
+#pedigree table {
+    margin-top: 0;
+}
+
+.pere {
+    color: #2e374d;
+}
+
+#pedigree table td.nob {
+    border-bottom: none;
+}

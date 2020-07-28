@@ -1,4 +1,4 @@
-<div class="card horse text-center">
+<div class="card horse text-center" *ngIf="name">
     <img class="card-img-top rounded-top" src={{srcimage}} alt="Photo du cheval">
     <div class="card-body">
         <h3>{{name}}</h3>
@@ -10,7 +10,7 @@
     </div>
     <div class="row no-gutters">
         <div class="col">
-            <a href="fr/foal-vendre/pop-music-feuillard-kon-warm-paard-nederland-bai-fonce,73.html">Consulter la fiche</a>
+            <a href="fr/foal-vendre/pop-music-feuillard-kon-warm-paard-nederland-bai-fonce,73.html" [routerLink]="[name.replace(' ', '_') | uppercase]">Consulter la fiche</a>
         </div>
     </div>
 </div>

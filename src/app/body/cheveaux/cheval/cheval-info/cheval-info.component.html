@@ -1,0 +1,111 @@
+<div style="margin-top: 210px;" *ngIf="genealogie">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="encadreChevalFiche">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 pt-3 pt-md-5 pb-3 pb-md-4">
+                            <h2 class="title">Le mot du propriétaire</h2>
+                            <p></p>
+                            <p>Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage.</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="encadreChevalFiche mb-0">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 pt-3 pt-md-5 pb-3 pb-md-4">
+                            <h2 class="title">Origines</h2>
+                            <p></p>
+                            <h1 class="origines">Origines Paternelles :</h1>
+                            <h2>{{genealogie.namePere | uppercase}}</h2>
+                            <h1 class="origines">Origines Maternelles :</h1>
+                            <h2>{{genealogie.nameMere | uppercase}}</h2>
+                            <h2>{{genealogie.nameMerePere | uppercase}}</h2>
+                            <img src="https://www.haras-du-feuillard.com/userfiles/chevaux/galaxie/larissajumentpargalaxie_000.jpeg" alt="" width="352" height="264">
+                            <p class="text-center sous_titre">Championne des juments de 3 ans à Drenthe 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="pedigree">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 pt-3 pb-3">
+                            <table class="genealogie">
+                                <tbody>
+                                    <tr>
+                                        <td class="p_male pere gen1" rowspan="4">
+                                            <span>{{genealogie.namePere | uppercase}}, </span>
+                                        </td>
+                                        <td class="gen2 p_male pere" rowspan="2">
+                                            <span>{{genealogie.namePerePere | uppercase}}, KWPN</span>
+                                        </td>
+                                        <td class="gen3 p_male pere" rowspan="1">
+                                            <span>{{genealogie.namePerePerePere | uppercase}}, KWPN</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p_femelle" rowspan="1">
+                                            <span>{{genealogie.namePerePereMere | uppercase}}, KWPN</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p_femelle" rowspan="2">
+                                            <span>{{genealogie.namePereMere | uppercase}}, KWPN</span>
+                                        </td>
+                                        <td class="p_male " rowspan="1">
+                                            <span>{{genealogie.namePereMerePere | uppercase}}, KWPN</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p_femelle" rowspan="1">
+                                            <span>{{genealogie.namePereMereMere | uppercase}}, KWPN</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p_femelle nob" rowspan="4">
+                                            <span>{{genealogie.nameMere | uppercase}}, SFA</span>
+                                        </td>
+                                        <td class="p_male perem pere" rowspan="2">
+                                            <span>{{genealogie.nameMerePere | uppercase}}, TRAK</span>
+                                        </td>
+                                        <td class="p_male pere" rowspan="1">
+                                            <span>{{genealogie.nameMerePerePere | uppercase}}, TRAK</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p_femelle" rowspan="1">
+                                            <span>{{genealogie.nameMerePereMere | uppercase}}, TRAK</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p_femelle nob" rowspan="2">
+                                            <span>{{genealogie.nameMereMere | uppercase}}, SFA</span>
+                                        </td>
+                                        <td class="p_male" rowspan="1">
+                                            <span>{{genealogie.nameMereMerePere | uppercase}}, HAN</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p_femelle nob" rowspan="1">
+                                            <span>{{genealogie.nameMereMereMere | uppercase}}, SFA</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

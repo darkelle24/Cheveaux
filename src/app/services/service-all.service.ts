@@ -15,4 +15,8 @@ export class ServiceAllService {
   getAllChevaux(): Observable<any> {
     return this.http.get<any>('assets/infoChevaux.json');
   }
+
+  getOneCheval(name: string): Observable<any> {
+    return this.http.get<any>('assets/chevalInfo/' + name.replace(' ', '_').toLowerCase() + '.json');
+  }
 }
