@@ -7,7 +7,7 @@
             <a routerLink="actualité" routerLinkActive="activeacceuil">Actualité</a>
         </li>
         <li class="menu-cheveaux">
-            <a routerLink="cheveaux" routerLinkActive="activecheveaux">Cheveaux</a>
+            <a routerLink="cheveaux" routerLinkActive="activecheveaux">Chevaux</a>
             <ul class="submenu" *ngIf="projets !== undefined">
                 <li *ngIf="projets.length >= 1"><a href={{projets[0].html_url}} target="_blank" rel="noopener" title="Github link: {{projets[0].html_url}}">{{projets[0].name}}</a></li>
                 <li *ngIf="projets.length >= 2"><a href={{projets[1].html_url}} target="_blank" rel="noopener" title="Github link: {{projets[1].html_url}}">{{projets[1].name}}</a></li>
@@ -16,7 +16,7 @@
             </ul>
         </li>
         <li class="menu-me">
-            <a routerLink="info" routerLinkActive="activemenu">L'elevage</a>
+            <a routerLink="info" routerLinkActive="activemenu">L'élevage</a>
         </li>
         <li class="contact">
             <a routerLink="acceuil">Contact</a>

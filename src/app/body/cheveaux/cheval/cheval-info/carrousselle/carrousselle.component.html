@@ -1,0 +1,10 @@
+<ngb-carousel #carousel [interval]="caroussel.interval" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+    <ng-template ngbSlide *ngFor="let content of caroussel.content; index as i">
+        <div class="carousel-caption">
+            <h3>{{content.image.descr}}</h3>
+        </div>
+        <div class="picsum-img-wrapper" *ngIf="content.hasOwnProperty('image')" style="background-color: black;">
+            <img class="d-block w-100" [src]="content.image.src" alt="{{content.image.descr}}">
+        </div>
+    </ng-template>
+</ngb-carousel>

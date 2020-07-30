@@ -1,4 +1,4 @@
-h2.title {
+.title {
     color: #2e374d;
     position: absolute;
     top: -25px;
@@ -9,4 +9,36 @@ h2.title {
 
 p {
     color: #77788d;
+}
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    box-sizing: border-box;
+    color: #23e06b;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.sous_titre {
+    font-style: italic;
+}
+
+img {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    border-style: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }

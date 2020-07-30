@@ -1,8 +1,14 @@
-<div class="row justify-content-center">
+<div style="width: 100%;" class="row justify-content-center">
     <div class="col-12 col-md-10 pt-3 pt-md-5 pb-3 pb-md-4">
-        <h2 class="title">Le mot du propriétaire</h2>
-        <p></p>
-        <p>Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage.</p>
+        <h2 class="title">{{block.title}}</h2>
+        <div *ngFor="let item of block.contents">
+            <p *ngIf="item.hasOwnProperty('text')">{{item.text}}</p>
+            <div *ngIf="item.hasOwnProperty('image')" style="text-align: center; margin-bottom: 1rem">
+                <img class="img-responsive" src="{{'assets/img/' + item.image.src}}" alt="{{item.image.src}}">
+                <span class="sous_titre">{{item.image.descr}}</span>
+            </div>
+            <h1 *ngIf="item.hasOwnProperty('title')">{{item.title}}</h1>
+        </div>
         <p></p>
     </div>
 </div>
