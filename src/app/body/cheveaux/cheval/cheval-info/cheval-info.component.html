@@ -1,4 +1,13 @@
-<div style="margin-top: 210px;" *ngIf="genealogie">
+<div style="margin-top: 250px;">
+    <div class="container mt-5">
+        <div *ngFor="let one_block of info">
+            <app-genealogie *ngIf="one_block.hasOwnProperty('app_genealogie')" class="row col-12 pedigree" [genealogie]="one_block.app_genealogie"></app-genealogie>
+            <app-carrousselle *ngIf="one_block.hasOwnProperty('app_carousel')"></app-carrousselle>
+            <app-block-info *ngIf="one_block.hasOwnProperty('app_block')" class="row col-12 encadreChevalFiche"></app-block-info>
+        </div>
+    </div>
+</div>
+<!-- <div style="margin-top: 210px;" *ngIf="genealogie">
     <div class="container mt-5">
         <div class="row">
             <div class="col-12">
@@ -108,4 +117,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class ChevalInfoComponent implements OnInit {
 
-  genealogie: any = null
+  info: any = null
 
   constructor(private projetService: ServiceAllService, private route: ActivatedRoute) { }
 
@@ -19,7 +19,7 @@ export class ChevalInfoComponent implements OnInit {
     this.projetService.getOneCheval(name)
       .subscribe(
         (data: any) => {
-          this.genealogie = data.généalogie;
+          this.info = data;
           console.log(data);
         },
         (err: any) => console.log('error :' + err)

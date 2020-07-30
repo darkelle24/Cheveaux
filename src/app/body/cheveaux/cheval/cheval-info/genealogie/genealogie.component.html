@@ -1,0 +1,66 @@
+<div style="width: 100%;" class="row justify-content-center">
+    <div class="col-12 col-md-10 pt-3 pb-3">
+        <table class="genealogie">
+            <tbody>
+                <tr>
+                    <td class="p_male pere gen1" rowspan="4">
+                        <span>{{genealogie.namePere | uppercase}}, </span>
+                    </td>
+                    <td class="gen2 p_male pere" rowspan="2">
+                        <span>{{genealogie.namePerePere | uppercase}}, KWPN</span>
+                    </td>
+                    <td class="gen3 p_male pere" rowspan="1">
+                        <span>{{genealogie.namePerePerePere | uppercase}}, KWPN</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p_femelle" rowspan="1">
+                        <span>{{genealogie.namePerePereMere | uppercase}}, KWPN</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p_femelle" rowspan="2">
+                        <span>{{genealogie.namePereMere | uppercase}}, KWPN</span>
+                    </td>
+                    <td class="p_male " rowspan="1">
+                        <span>{{genealogie.namePereMerePere | uppercase}}, KWPN</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p_femelle" rowspan="1">
+                        <span>{{genealogie.namePereMereMere | uppercase}}, KWPN</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p_femelle nob" rowspan="4">
+                        <span>{{genealogie.nameMere | uppercase}}, SFA</span>
+                    </td>
+                    <td class="p_male perem pere" rowspan="2">
+                        <span>{{genealogie.nameMerePere | uppercase}}, TRAK</span>
+                    </td>
+                    <td class="p_male pere" rowspan="1">
+                        <span>{{genealogie.nameMerePerePere | uppercase}}, TRAK</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p_femelle" rowspan="1">
+                        <span>{{genealogie.nameMerePereMere | uppercase}}, TRAK</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p_femelle nob" rowspan="2">
+                        <span>{{genealogie.nameMereMere | uppercase}}, SFA</span>
+                    </td>
+                    <td class="p_male" rowspan="1">
+                        <span>{{genealogie.nameMereMerePere | uppercase}}, HAN</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p_femelle nob" rowspan="1">
+                        <span>{{genealogie.nameMereMereMere | uppercase}}, SFA</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

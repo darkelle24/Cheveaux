@@ -19,6 +19,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { NewsComponent } from './body/news/news.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChevalInfoComponent } from './body/cheveaux/cheval/cheval-info/cheval-info.component';
+import { BlockInfoComponent } from './body/cheveaux/cheval/cheval-info/block-info/block-info.component';
+import { GenealogieComponent } from './body/cheveaux/cheval/cheval-info/genealogie/genealogie.component';
+import { CarrousselleComponent } from './body/cheveaux/cheval/cheval-info/carrousselle/carrousselle.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { ChevalInfoComponent } from './body/cheveaux/cheval/cheval-info/cheval-i
     PageNotFoundComponent,
     NewsComponent,
     ChevalInfoComponent,
+    BlockInfoComponent,
+    GenealogieComponent,
+    CarrousselleComponent,
   ],
   imports: [
     BrowserModule,
