@@ -1,20 +1,33 @@
-import { Component, ViewChild, Input } from '@angular/core';
+import { Component, ViewChild, Input, ViewEncapsulation, OnInit } from '@angular/core';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { DomSanitizer} from '@angular/platform-browser';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 
 @Component({
   selector: 'app-carrousselle',
   templateUrl: './carrousselle.component.html',
-  styleUrls: ['./carrousselle.component.scss']
+  styleUrls: ['./carrousselle.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
-export class CarrousselleComponent {
+export class CarrousselleComponent implements OnInit {
   @Input() caroussel: any;
 
   paused = false;
   unpauseOnArrow = false;
   pauseOnIndicator = false;
   pauseOnHover = true;
+
+  constructor(public sanitizer: DomSanitizer) {
+  }
+
+  ngOnInit(): void {
+    for (const content of this.caroussel.contents) {
+      if (content.hasOwnProperty('video'))
+        content.video.src = this.sanitizer.bypassSecurityTrustResourceUrl(content.video.src);
+    }
+  }
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 

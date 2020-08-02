@@ -1,15 +1,4 @@
 [{
-        "app_carousel": {
-            "interval": 0,
-            "width": 300,
-            "height": 300,
-            "content": [
-                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
-                { "image": { "src": "assets/img/Site_web_logo.png", "descr": "GALAXIE" } },
-                { "video": { "src": "", "descr": "lol" } }
-            ]
-        }
-    }, {
         "app_block": {
             "title": "DAB",
             "contents": [
@@ -33,6 +22,24 @@
         }
     }, {
         "app_block": {}
+    },
+    {
+        "app_carousel": {
+            "interval": 0,
+            "height": 500,
+            "contents": [
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/Site_web_logo.png", "descr": "GALAXIE" } },
+                { "video": { "src": "http://www.youtube.com/embed/M7lc1UVf-VE" } }
+            ]
+        }
     },
     {
         "app_genealogie": {

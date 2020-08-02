@@ -2,8 +2,8 @@
     <div class="container mt-5">
         <div *ngFor="let one_block of info">
             <app-genealogie *ngIf="one_block.hasOwnProperty('app_genealogie')" class="row col-12 pedigree justify-content-center" [genealogie]="one_block.app_genealogie"></app-genealogie>
-            <app-carrousselle *ngIf="one_block.hasOwnProperty('app_carousel_not_working')" [caroussel]="one_block.app_carousel"></app-carrousselle>
             <app-block-info *ngIf="one_block.hasOwnProperty('app_block')" class="row col-12 encadreChevalFiche justify-content-center" [block]="one_block.app_block"></app-block-info>
+            <app-carrousselle *ngIf="one_block.hasOwnProperty('app_carousel')" class="row col-12 carroussel justify-content-center" [caroussel]="one_block.app_carousel"></app-carrousselle>
         </div>
     </div>
 </div>

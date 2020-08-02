@@ -1,10 +1,20 @@
-<ngb-carousel #carousel [interval]="caroussel.interval" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
-    <ng-template ngbSlide *ngFor="let content of caroussel.content; index as i">
-        <div class="carousel-caption">
-            <h3>{{content.image.descr}}</h3>
-        </div>
-        <div class="picsum-img-wrapper" *ngIf="content.hasOwnProperty('image')" style="background-color: black;">
-            <img class="d-block w-100" [src]="content.image.src" alt="{{content.image.descr}}">
-        </div>
-    </ng-template>
-</ngb-carousel>
+<div style="width: 100%;" class="row justify-content-center">
+
+    <div class="justify-content-center w-100" [style.height.px]="caroussel.height">
+        <ngb-carousel style="outline: none;" #carousel [interval]="caroussel.interval" (slide)="onSlide($event)">
+            <ng-template ngbSlide *ngFor="let content of caroussel.contents; index as i">
+                <div class="carousel-caption">
+                    <h3 *ngIf="content.hasOwnProperty('image')">{{content.image.descr}}</h3>
+                    <h3 *ngIf="content.hasOwnProperty('video')"></h3>
+                </div>
+                <div [style.height.px]="caroussel.height" class="picsum-img-wrapper container-image w-100" *ngIf="content.hasOwnProperty('image')">
+                    <img style="max-width: 100%;height: auto;" class="justify-content-center img-fluid" [src]="content.image.src" alt="{{content.image.descr}}">
+                </div>
+                <div [style.height.px]="caroussel.height" style="text-align: center" class="w-100" *ngIf="content.hasOwnProperty('video')">
+                    <iframe width="800" [style.height.px]="caroussel.height" [src]="content.video.src" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+
+    </div>
+</div>
