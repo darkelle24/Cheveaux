@@ -22,6 +22,7 @@ import { ChevalInfoComponent } from './body/cheveaux/cheval/cheval-info/cheval-i
 import { BlockInfoComponent } from './body/cheveaux/cheval/cheval-info/block-info/block-info.component';
 import { GenealogieComponent } from './body/cheveaux/cheval/cheval-info/genealogie/genealogie.component';
 import { CarrousselleComponent } from './body/cheveaux/cheval/cheval-info/carrousselle/carrousselle.component';
+import { ProfilComponent } from './body/cheveaux/cheval/cheval-info/profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CarrousselleComponent } from './body/cheveaux/cheval/cheval-info/carrou
     BlockInfoComponent,
     GenealogieComponent,
     CarrousselleComponent,
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,

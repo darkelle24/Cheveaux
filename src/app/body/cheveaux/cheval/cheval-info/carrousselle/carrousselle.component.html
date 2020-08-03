@@ -1,7 +1,7 @@
 <div style="width: 100%;" class="row justify-content-center">
 
     <div class="justify-content-center w-100" [style.height.px]="caroussel.height">
-        <ngb-carousel style="outline: none;" #carousel [interval]="caroussel.interval" (slide)="onSlide($event)">
+        <ngb-carousel style="outline: none;" #carousel [interval]="caroussel.interval" [showNavigationIndicators]="false" (slide)="onSlide($event)">
             <ng-template ngbSlide *ngFor="let content of caroussel.contents; index as i">
                 <div class="carousel-caption">
                     <h3 *ngIf="content.hasOwnProperty('image')">{{content.image.descr}}</h3>

@@ -3,14 +3,14 @@
     <div class="card-body">
         <h3>{{name}}</h3>
         <h4>{{pere}} X {{pereMere}}</h4>
-        {{naissance | number}} - {{race | uppercase}} - {{robe | uppercase}} - {{sexe | uppercase}}
+        {{dateFormatted}} - {{race | uppercase}} - {{robe | uppercase}} - {{sexe | uppercase}}
         <div class="mt-2">
             {{prixMin | number}} à {{prixMax | number}} €
         </div>
     </div>
     <div class="row no-gutters">
         <div class="col">
-            <a href="fr/foal-vendre/pop-music-feuillard-kon-warm-paard-nederland-bai-fonce,73.html" [routerLink]="[name.replace(' ', '_') | uppercase]">Consulter la fiche</a>
+            <a href="/cheveaux/{{name.replace(' ', '_') | uppercase}}" [routerLink]="[name.replace(' ', '_') | uppercase]">Consulter la fiche</a>
         </div>
     </div>
 </div>

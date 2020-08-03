@@ -11,9 +11,9 @@ import { ChevalInfoComponent } from './body/cheveaux/cheval/cheval-info/cheval-i
 const appRoutes: Routes = [
     { path: 'cheveaux', component: CheveauxComponent, resolve: {resolvedProject: ProjectsResolverService} },
     { path: 'cheveaux/:name', component: ChevalInfoComponent, resolve: {resolvedProject: ProjectsResolverService} },
-    { path: 'acceuil', component: AcceuilComponent, resolve: {resolvedProject: ProjectsResolverService} },
+    { path: 'accueil', component: AcceuilComponent, resolve: {resolvedProject: ProjectsResolverService} },
     { path: 'info', component: InfoComponent, resolve: {resolvedProject: ProjectsResolverService} },
-    { path: '', redirectTo: 'acceuil', pathMatch: 'full' },
+    { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent },
 ];
 

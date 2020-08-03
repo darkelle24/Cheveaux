@@ -19,11 +19,14 @@ export class ChevalComponent implements OnInit {
   @Input() sexe: string;
   @Input() naissance: number;
 
+  dateFormatted: string;
+
   constructor() { }
 
   ngOnInit() {
     if (this.srcimage === undefined) {
       this.srcimage = null;
     }
+    this.dateFormatted = this.naissance.toString()
   }
 }

@@ -24,9 +24,13 @@ export class CarrousselleComponent implements OnInit {
 
   ngOnInit(): void {
     for (const content of this.caroussel.contents) {
-      if (content.hasOwnProperty('video'))
+      if (content.hasOwnProperty('video')) {
+        if (content.video.src.startsWith('https://www.youtube.com/watch?v='))
+        content.video.src = content.video.src.replace('https://www.youtube.com/watch?v=', 'http://www.youtube.com/embed/')
         content.video.src = this.sanitizer.bypassSecurityTrustResourceUrl(content.video.src);
+      }
     }
+    console.log(this.caroussel.contents)
   }
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
