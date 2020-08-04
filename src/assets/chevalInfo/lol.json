@@ -10,6 +10,64 @@
         "name": "Profil"
     },
     {
+        "app_genealogie": {
+            "Pere": { "name": "MMMM", "race": "kwpn" },
+            "PerePere": { "name": "fdsf", "race": "kwpn" },
+            "PerePerePere": { "name": "sdfs", "race": "kwpn" },
+            "PerePereMere": { "name": "jhgjgh", "race": "kwpn" },
+            "PereMere": { "name": "cvbcvbc", "race": "kwpn" },
+            "PereMerePere": { "name": "sfdf", "race": "kwpn" },
+            "PereMereMere": { "name": "zeaz", "race": "kwpn" },
+            "Mere": { "name": "vxcvcx", "race": "kwpn" },
+            "MerePere": { "name": "sqdqds", "race": "kwpn" },
+            "MerePerePere": { "name": "wcxcxw", "race": "kwpn" },
+            "MerePereMere": { "name": "qsddqs", "race": "kwpn" },
+            "MereMere": { "name": "wcwc", "race": "kwpn" },
+            "MereMerePere": { "name": "d", "race": "kwpn" },
+            "MereMereMere": { "name": "fgdgdf", "race": "kwpn" }
+        },
+        "name": "Genealogie"
+    },
+    {
+        "app_block": {
+            "title": "DAB",
+            "contents": [
+                { "title": "PTDR" },
+                { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." },
+                { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." },
+                { "image": { "src": "test.jpg", "descr": "GALAXIE" } },
+                { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." }
+            ]
+        },
+        "name": "DAB"
+    },
+    {
+        "app_block": {
+            "title": "DAB",
+            "contents": [
+                { "title": "PTDR" },
+                { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." },
+                { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." },
+                { "image": { "src": "test.jpg", "descr": "GALAXIE" } },
+                { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." }
+            ]
+        },
+        "name": "DAB"
+    },
+    {
+        "app_block": {
+            "title": "DAB",
+            "contents": [
+                { "title": "PTDR" },
+                { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." },
+                { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." },
+                { "image": { "src": "test.jpg", "descr": "GALAXIE" } },
+                { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." }
+            ]
+        },
+        "name": "DAB"
+    },
+    {
         "app_block": {
             "title": "DAB",
             "contents": [
@@ -35,8 +93,18 @@
         "name": "lol"
     },
     {
-        "app_block": {},
-        "name": "DAB"
+        "app_carousel": {
+            "interval": 0,
+            "height": 500,
+            "contents": [
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/ptdr.jpg", "descr": "GALAXIE" } },
+                { "image": { "src": "assets/img/Site_web_logo.png", "descr": "GALAXIE" } },
+                { "video": { "src": "https://www.youtube.com/watch?v=Zee8_mOeEFw" } },
+                { "video": { "src": "https://www.youtube.com/watch?v=G6W4T_rXLMM" } }
+            ]
+        },
+        "name": "Carrou"
     },
     {
         "app_carousel": {

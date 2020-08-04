@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ElementRef, AfterViewInit, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { ServiceAllService } from '../../../../services/service-all.service';
 import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
@@ -8,10 +8,9 @@ import { ViewportScroller } from '@angular/common';
   styleUrls: ['./cheval-info.component.scss']
 })
 
-export class ChevalInfoComponent implements OnInit, AfterViewInit {
+export class ChevalInfoComponent implements OnInit {
 
   info: any = null
-  sizeOfElement: Array<number> = []
   @ViewChildren('app') components:QueryList<ElementRef>;
   toActive = -1
 
@@ -28,28 +27,26 @@ export class ChevalInfoComponent implements OnInit, AfterViewInit {
       );
   }
 
-  ngAfterViewInit() {
-    this.sizeOfElement = []
-    this.components.changes.subscribe(c => {
-      this.components.forEach(element => this.sizeOfElement.push(element.nativeElement.offsetTop))
-    })
-  }
-
   @HostListener('window:scroll', ['$event']) checkOffsetTop() {
-    const numberOfElemnt = this.sizeOfElement.length
+    const tabOfComponents = this.components.toArray()
+    const numberOfElement = tabOfComponents.length
     const windowScroll = window.pageYOffset
     this.toActive = -1
     let i = 1
 
     do {
-      if (windowScroll >= this.sizeOfElement[i - 1] && windowScroll < this.sizeOfElement[i]) {
+      if (windowScroll >= this.getOffset(tabOfComponents[i - 1]) && windowScroll < this.getOffset(tabOfComponents[i])) {
         this.toActive = i - 1
-        break
+        return
       }
       i++
-    } while (i < numberOfElemnt)
-    if (this.sizeOfElement[i - 1] < windowScroll)
+    } while (i < numberOfElement)
+    if (this.getOffset(tabOfComponents[i - 1]) < windowScroll)
       this.toActive = i - 1
+  }
+
+  getOffset(element: ElementRef): number {
+    return element.nativeElement.offsetTop
   }
 
   onClick(elementId: string): void {
