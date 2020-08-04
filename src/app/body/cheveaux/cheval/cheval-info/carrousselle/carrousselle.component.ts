@@ -30,7 +30,6 @@ export class CarrousselleComponent implements OnInit {
         content.video.src = this.sanitizer.bypassSecurityTrustResourceUrl(content.video.src);
       }
     }
-    console.log(this.caroussel.contents)
   }
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;

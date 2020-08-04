@@ -46,7 +46,6 @@ export class CheveauxComponent implements OnInit {
       .subscribe(
         (data: any) => {
           this.chevaux = data;
-          console.log(data);
           this.save = data;
         },
         (err: any) => console.log('error :' + err)

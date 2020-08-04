@@ -6,7 +6,8 @@
             "robe": "bleu",
             "sexe": "Male",
             "imageProfil": "assets/img/ptdr.jpg"
-        }
+        },
+        "name": "Profil"
     },
     {
         "app_block": {
@@ -18,7 +19,8 @@
                 { "image": { "src": "test.jpg", "descr": "GALAXIE" } },
                 { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." }
             ]
-        }
+        },
+        "name": "DAB"
     },
     {
         "app_block": {
@@ -29,10 +31,12 @@
                 { "image": { "src": "test.jpg", "descr": "GALAXIE" } },
                 { "text": "Encore une magnifique pouliche par Galaxie x Gribaldi avec de la taille et une excellente orientation. Elle nous montre de la force, de la souplesse et 3 allures remarquables. Nous en faisons une très bonne jument pour le dressage." }
             ]
-        }
+        },
+        "name": "lol"
     },
     {
-        "app_block": {}
+        "app_block": {},
+        "name": "DAB"
     },
     {
         "app_carousel": {
@@ -45,7 +49,8 @@
                 { "video": { "src": "https://www.youtube.com/watch?v=Zee8_mOeEFw" } },
                 { "video": { "src": "https://www.youtube.com/watch?v=G6W4T_rXLMM" } }
             ]
-        }
+        },
+        "name": "Carrou"
     },
     {
         "app_genealogie": {
@@ -63,6 +68,7 @@
             "MereMere": { "name": "wcwc", "race": "kwpn" },
             "MereMerePere": { "name": "d", "race": "kwpn" },
             "MereMereMere": { "name": "fgdgdf", "race": "kwpn" }
-        }
+        },
+        "name": "Genealogie"
     }
 ]

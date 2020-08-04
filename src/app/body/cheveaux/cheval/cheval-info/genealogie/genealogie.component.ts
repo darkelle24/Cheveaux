@@ -12,7 +12,6 @@ export class GenealogieComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.genealogie)
   }
 
 }

@@ -1,10 +1,17 @@
-<div style="margin-top: 250px;">
-    <div class="container mt-5">
-        <div *ngFor="let one_block of info">
-            <app-profil *ngIf="one_block.hasOwnProperty('app_profil')" class="row col-12 encadreChevalFiche justify-content-center" [profil]="one_block.app_profil"></app-profil>
-            <app-genealogie *ngIf="one_block.hasOwnProperty('app_genealogie')" class="row col-12 pedigree justify-content-center" [genealogie]="one_block.app_genealogie"></app-genealogie>
-            <app-block-info *ngIf="one_block.hasOwnProperty('app_block')" class="row col-12 encadreChevalFiche justify-content-center" [block]="one_block.app_block"></app-block-info>
-            <app-carrousselle *ngIf="one_block.hasOwnProperty('app_carousel')" class="row col-12 carroussel justify-content-center" [caroussel]="one_block.app_carousel"></app-carrousselle>
+<div style="margin-top: 200px;">
+    <div id="list-example" class="list-group col-2 spyscroll">
+        <a class="list-group-item list-group-item-action" *ngFor="let one_block of info; let i = index" [ngClass]="{'active': toActive === i}" (click)="onClick(i)">{{one_block.name}}</a>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div #app *ngFor="let one_block of info; let i = index">
+                <div id="{{i}}" class="row col-12 justify-content-center"></div>
+                <app-profil *ngIf="one_block.hasOwnProperty('app_profil')" class="row col-12 encadreChevalFiche justify-content-center" [profil]="one_block.app_profil"></app-profil>
+                <app-genealogie *ngIf="one_block.hasOwnProperty('app_genealogie')" class="row col-12 pedigree justify-content-center" [genealogie]="one_block.app_genealogie"></app-genealogie>
+                <app-block-info *ngIf="one_block.hasOwnProperty('app_block')" class="row col-12 encadreChevalFiche justify-content-center" [block]="one_block.app_block"></app-block-info>
+                <app-carrousselle *ngIf="one_block.hasOwnProperty('app_carousel')" class="row col-12 carroussel justify-content-center" [caroussel]="one_block.app_carousel"></app-carrousselle>
+            </div>
         </div>
+
     </div>
 </div>

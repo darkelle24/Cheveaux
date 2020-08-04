@@ -24,3 +24,13 @@
 *::after {
     box-sizing: border-box;
 }
+
+.spyscroll {
+    position: fixed;
+    margin: 5% auto;
+    left: 20px;
+}
+
+.spyscroll a {
+    cursor: pointer;
+}
