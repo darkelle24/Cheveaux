@@ -18,14 +18,14 @@ export class AppComponent implements OnInit {
           this.loading = true;
           if (event.url.includes('accueil') || event.url === '/') {
             document.body.style.backgroundColor = '#a5d152';
+          } else if (event.url.includes('contact')) {
+            document.body.style.backgroundColor = '#f6f5fb';
           } else {
             document.body.style.backgroundColor = '#fff';
           } /*else if (event.url.includes('projet')) {
             document.body.style.backgroundColor = 'rgba(71, 78, 144, 0.63)';
           } else if (event.url.includes('me')) {
             document.body.style.backgroundColor = 'rgb(59, 59, 59)';
-          } else if (event.url.includes('contact')) {
-            document.body.style.backgroundColor = 'rgb(220, 220, 220)';
            */
         }
         if (event instanceof NavigationEnd ||

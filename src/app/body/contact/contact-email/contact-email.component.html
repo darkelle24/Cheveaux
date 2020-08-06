@@ -1,0 +1,44 @@
+<form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+    <div class="form-group">
+        <label for="name">Nom *</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" required placeholder="Nom" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Le nom est requis
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Adresse Email *</label>
+        <input type="email" required class="form-control" id="exampleInputEmail1" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email">
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+            L'email est requis
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputSujet">Sujet *</label>
+        <input type="text" required class="form-control" id="inputSujet" name="sujet" #sujet="ngModel" [(ngModel)]="model.sujet" placeholder="Sujet">
+        <div [hidden]="sujet.valid || sujet.pristine" class="alert alert-danger">
+            Le sujet est requis
+        </div>
+    </div>
+
+    <!-- <div class="form-group">
+        <label for="sujet">Sujet *</label>
+        <select class="form-control" id="sujet" name="sujet">
+        <option value="">{{pow}}</option>
+    </select>
+    </div> -->
+    <div class="form-group">
+        <label>Message *</label>
+        <textarea name="contact[message]" class="form-control" rows="5" name="message" #message="ngModel" placeholder="Message" required [(ngModel)]="model.message"></textarea>
+        <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+            Le message est requis
+        </div>
+    </div>
+
+    <small class="form-text text-muted" style="margin-bottom: 15px;margin-top: 0px;">Informations obligatoires *</small>
+    <div class="text-center">
+        <button type="submit" class="btn btn-info rounded" [disabled]="!contactForm.form.valid">Envoyer</button>
+    </div>
+</form>

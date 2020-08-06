@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ServiceAllService } from './services/service-all.service';
@@ -23,6 +24,9 @@ import { BlockInfoComponent } from './body/cheveaux/cheval/cheval-info/block-inf
 import { GenealogieComponent } from './body/cheveaux/cheval/cheval-info/genealogie/genealogie.component';
 import { CarrousselleComponent } from './body/cheveaux/cheval/cheval-info/carrousselle/carrousselle.component';
 import { ProfilComponent } from './body/cheveaux/cheval/cheval-info/profil/profil.component';
+import { ContactComponent } from './body/contact/contact.component';
+import { ContactInfoComponent } from './body/contact/contact-info/contact-info.component';
+import { ContactEmailComponent } from './body/contact/contact-email/contact-email.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,9 @@ import { ProfilComponent } from './body/cheveaux/cheval/cheval-info/profil/profi
     GenealogieComponent,
     CarrousselleComponent,
     ProfilComponent,
+    ContactComponent,
+    ContactInfoComponent,
+    ContactEmailComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +55,7 @@ import { ProfilComponent } from './body/cheveaux/cheval/cheval-info/profil/profi
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
+    FormsModule
   ],
   providers: [
     ServiceAllService,
