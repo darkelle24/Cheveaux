@@ -1,4 +1,4 @@
-<div style="margin-top: 200px;overflow: auto;max-height: 100%;">
+<div style="margin-top: 200px;max-height: 100%;">
     <div id="list-example" class="list-group col-2 spyscroll">
         <a class="list-group-item list-group-item-action" *ngFor="let one_block of info; let i = index" [ngClass]="{'active': toActive === i}" (click)="onClick(i)">{{one_block.name}}</a>
     </div>

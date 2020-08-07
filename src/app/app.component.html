@@ -1,4 +1,5 @@
 <app-header></app-header>
-<router-outlet>
-    <span class="spinner" *ngIf="loading"></span>
-</router-outlet>
+<section class="container">
+    <router-outlet><span class="spinner" *ngIf="loading"></span></router-outlet>
+</section>
+<app-footer class="mt-auto"></app-footer>

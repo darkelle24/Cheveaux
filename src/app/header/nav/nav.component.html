@@ -1,13 +1,13 @@
 <nav>
     <ul class="menu-nav">
         <li class="accueil">
-            <a routerLink="accueil" routerLinkActive="activeaccueil">Accueil</a>
+            <a routerLink="accueil" [ngClass]="{activeacceuil: toActive === 0}">Accueil</a>
         </li>
         <li class="actualité">
-            <a routerLink="actualité" routerLinkActive="activeacceuil">Actualité</a>
+            <a routerLink="actualité" [ngClass]="{activeacceuil: toActive === 1}">Actualité</a>
         </li>
         <li class="menu-cheveaux">
-            <a routerLink="cheveaux" routerLinkActive="activecheveaux">Chevaux</a>
+            <a routerLink="cheveaux" [ngClass]="{activecheveaux: toActive === 2}">Chevaux</a>
             <ul class="submenu" *ngIf="projets !== undefined">
                 <li *ngIf="projets.length >= 1"><a href={{projets[0].html_url}} target="_blank" rel="noopener" title="Github link: {{projets[0].html_url}}">{{projets[0].name}}</a></li>
                 <li *ngIf="projets.length >= 2"><a href={{projets[1].html_url}} target="_blank" rel="noopener" title="Github link: {{projets[1].html_url}}">{{projets[1].name}}</a></li>
@@ -16,10 +16,10 @@
             </ul>
         </li>
         <li class="menu-me">
-            <a routerLink="info" routerLinkActive="activemenu">L'élevage</a>
+            <a routerLink="info" [ngClass]="{activemenu: toActive === 3}">L'élevage</a>
         </li>
         <li class="contact">
-            <a routerLink="contact" routerLinkActive="activecontact">Contact</a>
+            <a routerLink="contact" [ngClass]="{activecontact: toActive === 4}">Contact</a>
         </li>
     </ul>
 </nav>
