@@ -72,3 +72,86 @@ a.disabled {
     color: gray;
     pointer-events: none;
 }
+
+@media (max-width:1090px) {
+    .logo b {
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width:991px) {
+    .logo {
+        margin: 0;
+    }
+}
+
+@media (max-width:767px) {
+    .btn {
+        font-size: 18px!important;
+    }
+    footer .borderLeft {
+        border-right: 0;
+    }
+    .fondFooter {
+        height: auto;
+    }
+    footer ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width:575px) {
+    .logo {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.fb_reset {
+    background: none;
+    border: 0;
+    border-spacing: 0;
+    color: #000;
+    cursor: auto;
+    direction: ltr;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    word-spacing: normal;
+}
+
+.fb_reset>div {
+    overflow: hidden;
+}
+
+.fb_iframe_widget {
+    display: inline-block;
+    position: relative;
+}
+
+.fb_iframe_widget span {
+    display: inline-block;
+    position: relative;
+    text-align: justify;
+}
+
+.fb_iframe_widget iframe {
+    position: absolute;
+}

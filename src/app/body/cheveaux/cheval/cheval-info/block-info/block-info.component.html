@@ -4,7 +4,7 @@
         <div *ngFor="let item of block.contents">
             <p *ngIf="item.hasOwnProperty('text')">{{item.text}}</p>
             <div *ngIf="item.hasOwnProperty('image')" style="text-align: center; margin-bottom: 1rem">
-                <img class="img-responsive" src="{{'assets/img/' + item.image.src}}" alt="{{item.image.src}}">
+                <img class="img-fluid" src="{{'assets/img/' + item.image.src}}" alt="{{item.image.src}}">
                 <span class="sous_titre">{{item.image.descr}}</span>
             </div>
             <h1 *ngIf="item.hasOwnProperty('title')">{{item.title}}</h1>

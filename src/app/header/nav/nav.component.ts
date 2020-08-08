@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, Output, EventEmitter } from '@angular/core';
 import { ServiceAllService } from '../../services/service-all.service';
 import { Router, Event, NavigationStart } from '@angular/router';
 
@@ -11,7 +11,13 @@ export class NavComponent implements OnInit {
 
   projets: any[];
 
+  mobile = false
+
   toActive = 0
+
+  toogle = false
+
+  @Output() sendToogle = new EventEmitter<boolean>();
 
   constructor(private projetService: ServiceAllService, private router: Router) { }
 
@@ -23,6 +29,12 @@ export class NavComponent implements OnInit {
         },
         (err: any) => console.log('error :' + err)
     );
+
+    if (window.screen.width <= 575) {
+      this.mobile = true;
+    } else {
+      this.mobile = false;
+    }
 
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
@@ -39,7 +51,27 @@ export class NavComponent implements OnInit {
         } else {
           this.toActive = -1
         }
+        console.log(this.toActive)
       }
     });
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    if (window.screen.width <= 575) {
+      this.mobile = true;
+    } else {
+      this.toogle = false
+      this.sendToogle.emit(this.toogle)
+      this.mobile = false;
+    }
+  }
+
+  activeToogle() {
+    if (this.toogle === false)
+      this.toogle = true
+    else
+      this.toogle = false
+    this.sendToogle.emit(this.toogle)
   }
 }

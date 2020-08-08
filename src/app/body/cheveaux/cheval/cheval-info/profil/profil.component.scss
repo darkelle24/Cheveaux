@@ -22,3 +22,13 @@ dd {
 .card {
     border: none;
 }
+
+.video {
+    width: 750;
+}
+
+@media (max-width:1199px) {
+    .video {
+        width: 650;
+    }
+}

@@ -53,4 +53,8 @@ export class ChevalInfoComponent implements OnInit {
     this.viewportScroller.scrollToAnchor(elementId);
   }
 
+  getSizeWidth(): number {
+    return window.screen.width
+  }
+
 }

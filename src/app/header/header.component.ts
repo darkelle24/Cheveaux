@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  toogle = false
+
+  @Output() sendToogle = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  eventFromChild(data) {
+    this.toogle = data;
+    this.sendToogle.emit(this.toogle)
   }
 
 }

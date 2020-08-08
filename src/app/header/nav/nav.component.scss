@@ -44,7 +44,7 @@ nav a {
     text-decoration: none;
 }
 
-nav>ul>li>a {
+a {
     padding: 20px 30px;
     color: #FFF;
     font-size: 18px;
@@ -95,39 +95,43 @@ nav>ul {
     justify-content: space-evenly;
 }
 
-.menu-cheveaux .submenu {
-    background-color: #294c63
-}
-
-.menu-me .submenu {
-    background-color: #7a6b05
-}
-
-.submenu li:hover a {
-    color: #EEE;
-    font-weight: bold;
-}
-
-.menu-cheveaux .submenu li:hover {
-    background-color: rgb(000, 115, 200)
-}
-
-.menu-me .submenu li:hover {
-    background-color: rgb(200, 165, 75)
+div>a {
+    border: 1px solid #cfaa7e;
+    background-color: transparent;
+    font-size: 15px;
+    padding-top: 17px;
+    padding-bottom: 17px;
 }
 
 .activeacceuil {
-    background-color: rgba(228, 77, 38, 0.15);
+    background-color: rgba(228, 77, 38, 0.15)!important;
 }
 
 .activecheveaux {
-    background-color: rgba(000, 112, 192, 0.15);
+    background-color: rgba(000, 112, 192, 0.15)!important;
 }
 
 .activemenu {
-    background-color: rgba(241, 211, 79, 0.15);
+    background-color: rgba(241, 211, 79, 0.15)!important;
 }
 
 .activecontact {
-    background-color: rgba(220, 220, 220, 0.15);
+    background-color: rgba(220, 220, 220, 0.15)!important;
+}
+
+@media (max-width:575px) {
+    nav {
+        margin-top: 113px;
+        height: 400px;
+    }
+    .navbar-toggler {
+        margin-left: 10px;
+        padding: 0 0 0 10px;
+        margin-right: auto;
+        color: #cfaa7e;
+        border: 1px solid #cfaa7e;
+        font-size: 20px;
+        padding: 6px 8px;
+        border-radius: 5px;
+    }
 }

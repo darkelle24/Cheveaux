@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
 
   title = 'Elevage de Mandacou';
   loading = true;
+  toogle = false
 
   constructor(private router: Router) {
 
@@ -37,6 +38,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  eventFromChild(data) {
+    this.toogle = data;
   }
 }
 

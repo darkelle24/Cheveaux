@@ -10,3 +10,30 @@ img {
     background-color: #f6f5fb;
     display: flex;
 }
+
+@media (max-width:425px) {
+    .carousel-caption h3 {
+        color: black;
+    }
+}
+
+.video {
+    width: 800px!important;
+}
+
+@media (max-width:1200px) {
+    .video {
+        width: 650px!important;
+    }
+}
+
+@media (max-width:320px) {
+    .video {
+        margin-top: 50px;
+        width: 200px!important;
+        height: 200px!important;
+    }
+    .container-perso {
+        height: 300px!important;
+    }
+}
