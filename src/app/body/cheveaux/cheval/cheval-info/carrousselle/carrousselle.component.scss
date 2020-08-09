@@ -6,6 +6,25 @@ img {
     margin-bottom: auto;
 }
 
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: rgb(180, 180, 180);
+    color: black;
+    text-decoration: none;
+}
+
+.round {
+    border-radius: 50%;
+    background-color: #dddada;
+    color: black;
+    font-size: 22px;
+}
+
 .container-image {
     background-color: #f6f5fb;
     display: flex;

@@ -1,20 +1,21 @@
 <div style="width: 100%;" class="row justify-content-center">
 
-    <div class="container-perso justify-content-center w-100" [style.height.px]="caroussel.height + 50">
-        <ngb-carousel style="outline: none;" #carousel [interval]="caroussel.interval" [showNavigationIndicators]="false" (slide)="onSlide($event)">
-            <ng-template ngbSlide *ngFor="let content of caroussel.contents; index as i">
-                <div class="carousel-caption">
-                    <h3 *ngIf="content.hasOwnProperty('image')">{{content.image.descr}}</h3>
-                    <h3 *ngIf="content.hasOwnProperty('video')"></h3>
-                </div>
-                <div [style.height.px]="caroussel.height" class="container-perso picsum-img-wrapper container-image w-100" *ngIf="content.hasOwnProperty('image')">
-                    <img style="max-width: 100%;height: auto;" class="justify-content-center img-fluid" [src]="content.image.src" alt="{{content.image.descr}}">
-                </div>
-                <div [style.height.px]="caroussel.height" style="text-align: center" class="container-perso w-100" *ngIf="content.hasOwnProperty('video')">
-                    <iframe class="video" [style.height.px]="caroussel.height" [src]="content.video.src" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </ng-template>
-        </ngb-carousel>
-
+    <div class="container-perso justify-content-center w-100" [style.height.px]="caroussel.height + 55">
+        <div *ngFor="let content of caroussel.contents; index as i">
+            <!-- <div class="carousel-caption">
+                <h3 *ngIf="content.hasOwnProperty('image') && position === i">{{content.image.descr}}</h3>
+                <h3 *ngIf="content.hasOwnProperty('video') && position === i"></h3>
+            </div> -->
+            <div [style.height.px]="caroussel.height" class="container-perso picsum-img-wrapper container-image w-100" *ngIf="content.hasOwnProperty('image') && position === i">
+                <img style="max-width: 100%;height: auto;" class="justify-content-center img-fluid" [src]="content.image.src" alt="{{content.image.descr}}">
+            </div>
+            <div [style.height.px]="caroussel.height" style="text-align: center" class="container-perso w-100" *ngIf="content.hasOwnProperty('video') && position === i">
+                <iframe class="video" [style.height.px]="caroussel.height" [src]="content.video.src" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="w-100" style="display: flex;justify-content: space-around;">
+            <a type="button" class="previous round" (click)="prevObject()">&#8249;</a>
+            <a type="button" class="next round" (click)="nextObject()">&#8250;</a>
+        </div>
     </div>
 </div>
