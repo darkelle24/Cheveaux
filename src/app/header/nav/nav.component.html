@@ -1,19 +1,19 @@
 <nav>
     <ul class="menu-nav" *ngIf="mobile === false">
         <li class="accueil">
-            <a routerLink="accueil" [ngClass]="{activeacceuil: toActive === 0}">Accueil</a>
+            <a routerLink="accueil" [ngClass]="{activeacceuil: toActive === 0}">{{"HEADER.HOME" | translate}}</a>
         </li>
         <li class="actualité">
-            <a routerLink="actualité" [ngClass]="{activeacceuil: toActive === 1}">Actualité</a>
+            <a routerLink="actualité" [ngClass]="{activeacceuil: toActive === 1}">{{"HEADER.ACTUALITY" | translate}}</a>
         </li>
         <li class="menu-cheveaux">
-            <a routerLink="cheveaux" [ngClass]="{activecheveaux: toActive === 2}">Chevaux</a>
+            <a routerLink="cheveaux" [ngClass]="{activecheveaux: toActive === 2}">{{"HEADER.HORSES" | translate}}</a>
         </li>
         <li class="menu-me">
-            <a routerLink="info" [ngClass]="{activemenu: toActive === 3}">L'élevage</a>
+            <a routerLink="info" [ngClass]="{activemenu: toActive === 3}">{{"HEADER.INFO" | translate}}</a>
         </li>
         <li class="contact">
-            <a routerLink="contact" [ngClass]="{activecontact: toActive === 4}">Contact</a>
+            <a routerLink="contact" [ngClass]="{activecontact: toActive === 4}">{{"HEADER.CONTACT" | translate}}</a>
         </li>
     </ul>
     <div class="row w-100" style="margin-top: 50px;" *ngIf="mobile === true">
@@ -24,10 +24,10 @@
         </div>
     </div>
     <div class="list-group" style="margin-top: 5px;" *ngIf="toogle === true">
-        <a routerLink="accueil" [ngClass]="{activeacceuil: toActive === 0}">Accueil</a>
-        <a routerLink="actualité" [ngClass]="{activeacceuil: toActive === 1}">Actualité</a>
-        <a routerLink="cheveaux" [ngClass]="{activecheveaux: toActive === 2}">Chevaux</a>
-        <a routerLink="info" [ngClass]="{activemenu: toActive === 3}">L'élevage</a>
-        <a routerLink="contact" [ngClass]="{activecontact: toActive === 4}">Contact</a>
+        <a routerLink="accueil" [ngClass]="{activeacceuil: toActive === 0}">{{"HEADER.HOME" | translate}}</a>
+        <a routerLink="actualité" [ngClass]="{activeacceuil: toActive === 1}">{{"HEADER.ACTUALITY" | translate}}</a>
+        <a routerLink="cheveaux" [ngClass]="{activecheveaux: toActive === 2}">{{"HEADER.HORSES" | translate}}</a>
+        <a routerLink="info" [ngClass]="{activemenu: toActive === 3}">{{"HEADER.INFO" | translate}}</a>
+        <a routerLink="contact" [ngClass]="{activecontact: toActive === 4}">{{"HEADER.CONTACT" | translate}}</a>
     </div>
 </nav>

@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md borderLeft pt-4 pt-md-0 pr-lg-5 text-center text-md-left">
 
-                        <a routerLink="accueil" class="logo" title="Retour à l'accueil" style="margin-bottom: 5%;"><b>Elevage de Mandacou</b></a>
+                        <a routerLink="accueil" class="logo" title="Retour à l'accueil" style="margin-bottom: 1rem;"><b>Elevage de Mandacou</b></a>
 
                         <p>Stéphane Vénèque<br>24560 Mandacou</p>
                         <p>haras-du-feuillard@wanadoo.fr</p>
@@ -39,8 +39,8 @@
                     <div class="col-md pt-4 pt-md-0 pl-lg-5 text-center text-md-left">
                         <ul>
                             <li><a routerLink="accueil" title="Retour à l'accueil du site">Elevage de Mandacou ©2020</a></li>
-                            <li><a href="fr/" class="disabled" title="Version française">Version française</a></li>
-                            <li><a href="en/" class="disabled" title="English version">English version</a></li>
+                            <li><a title="Version française" (click)="translate.use('fr')">Version française</a></li>
+                            <li><a title="English version" (click)="translate.use('eng')">English version</a></li>
                             <li><a routerLink="contact" title="Contact">Contact</a></li>
                             <li><a href="https://www.equideclic.com/" class="disabled" title="Réalisation Equideclic" target="_blank">Réalisation Equideclic</a></li>
                         </ul>

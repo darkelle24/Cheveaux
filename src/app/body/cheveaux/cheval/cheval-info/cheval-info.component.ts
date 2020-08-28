@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, ElementRef, ViewChildren, QueryList } 
 import { ServiceAllService } from '../../../../services/service-all.service';
 import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   templateUrl: './cheval-info.component.html',
@@ -14,17 +15,14 @@ export class ChevalInfoComponent implements OnInit {
   @ViewChildren('app') components:QueryList<ElementRef>;
   toActive = -1
 
-  constructor(private projetService: ServiceAllService, private route: ActivatedRoute, private viewportScroller: ViewportScroller) { }
+  constructor(private projetService: ServiceAllService, private route: ActivatedRoute
+    , private viewportScroller: ViewportScroller, private translate: TranslateService) { }
 
   ngOnInit(): void {
-    const name = this.route.snapshot.params.name;
-    this.projetService.getOneCheval(name)
-      .subscribe(
-        (data: any) => {
-          this.info = data;
-        },
-        (err: any) => console.log('error :' + err)
-      );
+    this.getData();
+    this.translate.onLangChange.subscribe((event: any) => {
+      this.getData()
+    });
   }
 
   @HostListener('window:scroll', ['$event']) checkOffsetTop() {
@@ -55,6 +53,17 @@ export class ChevalInfoComponent implements OnInit {
 
   getSizeWidth(): number {
     return window.screen.width
+  }
+
+  getData() {
+    const name = this.route.snapshot.params.name;
+    this.projetService.getOneCheval(name, this.translate.currentLang)
+      .subscribe(
+        (data: any) => {
+          this.info = data;
+        },
+        (err: any) => console.log('error :' + err)
+    );
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError, NavigationCancel } from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,11 @@ export class AppComponent implements OnInit {
   loading = true;
   toogle = false
 
-  constructor(private router: Router) {
+  constructor(private router: Router, translate: TranslateService) {
+
+    translate.setDefaultLang('en');
+
+    translate.use('en');
 
     this.router.events.subscribe((event: Event) => {
         if (event instanceof NavigationStart) {
