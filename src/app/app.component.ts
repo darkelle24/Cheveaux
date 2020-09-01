@@ -10,7 +10,6 @@ import {TranslateService} from '@ngx-translate/core';
 export class AppComponent implements OnInit {
 
   title = 'Elevage de Mandacou';
-  loading = true;
   toogle = false
 
   constructor(private router: Router, translate: TranslateService) {
@@ -21,7 +20,6 @@ export class AppComponent implements OnInit {
 
     this.router.events.subscribe((event: Event) => {
         if (event instanceof NavigationStart) {
-          this.loading = true;
           if (event.url.includes('accueil') || event.url === '/') {
             document.body.style.backgroundColor = '#a5d152';
           } else if (event.url.includes('contact')) {
@@ -34,11 +32,6 @@ export class AppComponent implements OnInit {
             document.body.style.backgroundColor = 'rgb(59, 59, 59)';
            */
         }
-        if (event instanceof NavigationEnd ||
-          event instanceof NavigationCancel ||
-          event instanceof NavigationError) {
-            this.loading = false;
-          }
     });
   }
 

@@ -1,8 +1,9 @@
 <div style="margin-top: 200px;max-height: 100%;font-size: 13px;">
-    <div id="list-example" class="list-group col-2 spyscroll" *ngIf="getSizeWidth() >= 1690">
+    <app-spinner *ngIf="loading"></app-spinner>
+    <div id="list-example" class="list-group col-2 spyscroll" *ngIf="getSizeWidth() >= 1690 && !loading">
         <a class="list-group-item list-group-item-action" *ngFor="let one_block of info; let i = index" [ngClass]="{'active': toActive === i}" (click)="onClick(i)">{{one_block.name}}</a>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="!loading">
         <div class="container">
             <div #app *ngFor="let one_block of info; let i = index">
                 <div id="{{i}}" class="row col-12 justify-content-center"></div>

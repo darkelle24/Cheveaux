@@ -40,7 +40,7 @@ export class NavComponent implements OnInit {
       if (event instanceof NavigationStart) {
         if (event.url.includes('accueil') || event.url === '/') {
           this.toActive = 0
-        } else if (event.url.includes('cheveaux')) {
+        } else if (event.url.includes('chevaux')) {
           this.toActive = 2
         } else if (event.url.includes('info')) {
           this.toActive = 3

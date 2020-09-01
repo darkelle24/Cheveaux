@@ -39,10 +39,12 @@ export class CheveauxComponent implements OnInit {
 
   save: any[] = null;
   chevaux: any[] = null;
+  loading = true
 
   constructor(private projetService: ServiceAllService, private route: ActivatedRoute, private translate: TranslateService) { }
 
   ngOnInit() {
+    this.loading = true
     this.getData();
     this.translate.onLangChange.subscribe((event: any) => {
       this.getData()
@@ -63,6 +65,7 @@ export class CheveauxComponent implements OnInit {
       .subscribe(
         (data: any) => {
           this.chevaux = data;
+          this.loading = false;
         },
         (err: any) => console.log('error :' + err)
     );

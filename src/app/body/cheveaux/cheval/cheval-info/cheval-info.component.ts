@@ -11,6 +11,7 @@ import {TranslateService} from '@ngx-translate/core';
 
 export class ChevalInfoComponent implements OnInit {
 
+  loading = true
   info: any = null
   @ViewChildren('app') components:QueryList<ElementRef>;
   toActive = -1
@@ -19,6 +20,7 @@ export class ChevalInfoComponent implements OnInit {
     , private viewportScroller: ViewportScroller, private translate: TranslateService) { }
 
   ngOnInit(): void {
+    this.loading = true
     this.getData();
     this.translate.onLangChange.subscribe((event: any) => {
       this.getData()
@@ -61,6 +63,7 @@ export class ChevalInfoComponent implements OnInit {
       .subscribe(
         (data: any) => {
           this.info = data;
+          this.loading = false
         },
         (err: any) => console.log('error :' + err)
     );

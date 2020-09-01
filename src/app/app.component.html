@@ -1,5 +1,5 @@
 <app-header (sendToogle)="eventFromChild($event)"></app-header>
 <section class="container" [ngClass]="{topSpace: toogle === true}">
-    <router-outlet><span class="spinner" *ngIf="loading"></span></router-outlet>
+    <router-outlet></router-outlet>
 </section>
 <app-footer class="mt-auto w-100"></app-footer>

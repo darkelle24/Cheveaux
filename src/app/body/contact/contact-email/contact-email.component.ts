@@ -16,4 +16,6 @@ export class ContactEmailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit() {}
+
 }

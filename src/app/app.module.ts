@@ -29,6 +29,7 @@ import { ProfilComponent } from './body/cheveaux/cheval/cheval-info/profil/profi
 import { ContactComponent } from './body/contact/contact.component';
 import { ContactInfoComponent } from './body/contact/contact-info/contact-info.component';
 import { ContactEmailComponent } from './body/contact/contact-email/contact-email.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -54,6 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     ContactInfoComponent,
     ContactEmailComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,

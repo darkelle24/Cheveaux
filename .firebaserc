@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "elevage-de-mandacou": {
+      "hosting": {
+        "Darkelle": [
+          "elevage-de-mandacou"
+        ]
+      }
+    }
+  }
+}

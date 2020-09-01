@@ -5,8 +5,9 @@ footer {
     color: #fff;
 }
 
-a {
-    padding-left: 0px;
+div.link a {
+    display: inline!important;
+    padding: 0px!important;
 }
 
 .logo {
@@ -29,12 +30,13 @@ a {
 }
 
 a:hover {
-    cursor: pointer;
-    text-decoration: underline;
+    cursor: pointer!important;
+    text-decoration: underline!important;
+    background-color: #ffffff00!important;
 }
 
 footer a:hover {
-    color: #cfaa7e;
+    color: #cfaa7e!important;
 }
 
 .fondFooter {
