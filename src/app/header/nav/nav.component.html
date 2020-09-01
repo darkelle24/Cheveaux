@@ -7,7 +7,7 @@
             <a routerLink="actualité" [ngClass]="{activeacceuil: toActive === 1}">{{"HEADER.ACTUALITY" | translate}}</a>
         </li>
         <li class="menu-cheveaux">
-            <a routerLink="cheveaux" [ngClass]="{activecheveaux: toActive === 2}">{{"HEADER.HORSES" | translate}}</a>
+            <a routerLink="chevaux" [ngClass]="{activecheveaux: toActive === 2}">{{"HEADER.HORSES" | translate}}</a>
         </li>
         <li class="menu-me">
             <a routerLink="info" [ngClass]="{activemenu: toActive === 3}">{{"HEADER.INFO" | translate}}</a>
@@ -26,7 +26,7 @@
     <div class="list-group" style="margin-top: 5px;" *ngIf="toogle === true">
         <a routerLink="accueil" [ngClass]="{activeacceuil: toActive === 0}">{{"HEADER.HOME" | translate}}</a>
         <a routerLink="actualité" [ngClass]="{activeacceuil: toActive === 1}">{{"HEADER.ACTUALITY" | translate}}</a>
-        <a routerLink="cheveaux" [ngClass]="{activecheveaux: toActive === 2}">{{"HEADER.HORSES" | translate}}</a>
+        <a routerLink="chevaux" [ngClass]="{activecheveaux: toActive === 2}">{{"HEADER.HORSES" | translate}}</a>
         <a routerLink="info" [ngClass]="{activemenu: toActive === 3}">{{"HEADER.INFO" | translate}}</a>
         <a routerLink="contact" [ngClass]="{activecontact: toActive === 4}">{{"HEADER.CONTACT" | translate}}</a>
     </div>

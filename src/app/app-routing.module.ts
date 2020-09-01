@@ -10,8 +10,8 @@ import { ChevalInfoComponent } from './body/cheveaux/cheval/cheval-info/cheval-i
 import { ContactComponent } from './body/contact/contact.component';
 
 const appRoutes: Routes = [
-    { path: 'cheveaux', component: CheveauxComponent, resolve: {resolvedProject: ProjectsResolverService} },
-    { path: 'cheveaux/:name', component: ChevalInfoComponent, resolve: {resolvedProject: ProjectsResolverService} },
+    { path: 'chevaux', component: CheveauxComponent, resolve: {resolvedProject: ProjectsResolverService} },
+    { path: 'chevaux/:name', component: ChevalInfoComponent, resolve: {resolvedProject: ProjectsResolverService} },
     { path: 'accueil', component: AcceuilComponent, resolve: {resolvedProject: ProjectsResolverService} },
     { path: 'info', component: InfoComponent, resolve: { resolvedProject: ProjectsResolverService } },
     { path: 'contact', component: ContactComponent, resolve: {resolvedProject: ProjectsResolverService} },

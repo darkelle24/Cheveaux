@@ -30,6 +30,11 @@ a:hover {
     display: flex;
 }
 
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
 @media (max-width:425px) {
     .carousel-caption h3 {
         color: black;
@@ -46,13 +51,45 @@ a:hover {
     }
 }
 
-@media (max-width:320px) {
+@media (max-width:760px) {
+    .video {
+        margin-top: 50px;
+        width: 400px!important;
+        height: 400px!important;
+    }
+}
+
+@media (max-width:440px) {
+    .video {
+        margin-top: 50px;
+        width: 300px!important;
+        height: 400px!important;
+    }
+    .container-perso {
+        height: 460px!important;
+    }
+    .menu {
+        margin-top: -42px;
+    }
+    .round {
+        border-radius: 0%;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:350px) {
     .video {
         margin-top: 50px;
         width: 200px!important;
         height: 200px!important;
     }
     .container-perso {
-        height: 300px!important;
+        height: 350px!important;
+    }
+    .menu {
+        margin-top: -42px;
+    }
+    .round {
+        border-radius: 0%;
     }
 }

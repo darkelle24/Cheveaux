@@ -1,0 +1,55 @@
+[{
+    "name": "Reine Wolke",
+    "pere": "Wolkentanz II",
+    "pereMere": "Figaro",
+    "naissance": 1999,
+    "race": "Oldenbourg",
+    "robe": "Alezan",
+    "sexe": "Femelle",
+    "srcimage": "assets/img/ptdr.jpg"
+}, {
+    "name": "Sir Magnus Mandacou Z",
+    "pere": "Sir Donnerhall",
+    "pereMere": "Wolkentanz II",
+    "naissance": 2012,
+    "race": "Zangersheide",
+    "robe": "Alezan",
+    "sexe": "Hongre",
+    "srcimage": "assets/img/ptdr.jpg"
+}, {
+    "name": "San Real De Mandacou",
+    "pere": "Sandreo",
+    "pereMere": "Wolkentanz II",
+    "naissance": 2016,
+    "race": "Oldenbourg",
+    "robe": "Baie Foncé",
+    "sexe": "Hongre",
+    "srcimage": "assets/img/ptdr.jpg"
+}, {
+    "name": "Sanzuan De mandacou",
+    "pere": "Sezuan",
+    "pereMere": "Wolkentanz II",
+    "naissance": 2018,
+    "race": "Oldenbourg",
+    "robe": "Alezan",
+    "sexe": "Hongre",
+    "srcimage": "assets/img/ptdr.jpg"
+}, {
+    "name": "Secret World Mandacou",
+    "pere": "Secret",
+    "pereMere": "Wolkentanz II",
+    "naissance": 2019,
+    "race": "Oldenbourg",
+    "robe": "Noir Pangaré",
+    "sexe": "Femelle",
+    "srcimage": "assets/img/ptdr.jpg"
+}, {
+    "name": "Swinggy Secret Mandacou",
+    "pere": "Secret",
+    "pereMere": "Wolkentanz II",
+    "naissance": 2020,
+    "race": "Oldenbourg",
+    "robe": "Alzan",
+    "sexe": "Femelle",
+    "srcimage": "assets/img/ptdr.jpg"
+}]

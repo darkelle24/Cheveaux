@@ -6,14 +6,14 @@
                 <h3 *ngIf="content.hasOwnProperty('image') && position === i">{{content.image.descr}}</h3>
                 <h3 *ngIf="content.hasOwnProperty('video') && position === i"></h3>
             </div> -->
-            <div [style.height.px]="caroussel.height" class="container-perso picsum-img-wrapper container-image w-100" *ngIf="content.hasOwnProperty('image') && position === i">
+            <div [style.height.px]="caroussel.height" class="container-perso picsum-img-wrapper container-image w-100" [hidden]="position !== i" *ngIf="content.hasOwnProperty('image')">
                 <img style="max-width: 100%;height: auto;" class="justify-content-center img-fluid" [src]="content.image.src" alt="{{content.image.descr}}">
             </div>
-            <div [style.height.px]="caroussel.height" style="text-align: center" class="container-perso w-100" *ngIf="content.hasOwnProperty('video') && position === i">
+            <div [style.height.px]="caroussel.height" style="text-align: center" class="container-perso w-100" [hidden]="position !== i" *ngIf="content.hasOwnProperty('video')">
                 <iframe class="video" [style.height.px]="caroussel.height" [src]="content.video.src" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
-        <div class="w-100" style="display: flex;justify-content: space-around;">
+        <div class="w-100 menu">
             <a type="button" class="previous round" (click)="prevObject()">&#8249;</a>
             <a type="button" class="next round" (click)="nextObject()">&#8250;</a>
         </div>

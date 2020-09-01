@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceAllService } from '../../services/service-all.service';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import {
   trigger,
   style,
@@ -39,17 +40,13 @@ export class CheveauxComponent implements OnInit {
   save: any[] = null;
   chevaux: any[] = null;
 
-  constructor(private projetService: ServiceAllService, private route: ActivatedRoute) { }
+  constructor(private projetService: ServiceAllService, private route: ActivatedRoute, private translate: TranslateService) { }
 
   ngOnInit() {
-    this.projetService.getAllChevaux()
-      .subscribe(
-        (data: any) => {
-          this.chevaux = data;
-          this.save = data;
-        },
-        (err: any) => console.log('error :' + err)
-      );
+    this.getData();
+    this.translate.onLangChange.subscribe((event: any) => {
+      this.getData()
+    });
   }
 
   onEnter(search: any) {
@@ -59,4 +56,16 @@ export class CheveauxComponent implements OnInit {
   onKey(event: any) {
     // this.projet = this.save.filter(project => project.name.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1);
   }
+
+  getData() {
+    const name = this.route.snapshot.params.name;
+    this.projetService.getAllChevaux(this.translate.currentLang)
+      .subscribe(
+        (data: any) => {
+          this.chevaux = data;
+        },
+        (err: any) => console.log('error :' + err)
+    );
+  }
+
 }

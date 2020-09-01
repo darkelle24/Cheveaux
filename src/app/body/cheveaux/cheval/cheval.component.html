@@ -4,13 +4,10 @@
         <h3>{{name}}</h3>
         <h4>{{pere}} X {{pereMere}}</h4>
         {{dateFormatted}} - {{race | uppercase}} - {{robe | uppercase}} - {{sexe | uppercase}}
-        <div class="mt-2">
-            {{prixMin | number}} à {{prixMax | number}} €
-        </div>
     </div>
     <div class="row no-gutters">
         <div class="col">
-            <a href="/cheveaux/{{name.replace(' ', '_') | uppercase}}" [routerLink]="[name.replace(' ', '_') | uppercase]">Consulter la fiche</a>
+            <a href="/chevaux/{{name.replace(' ', '_') | uppercase}}" [routerLink]="[name.replace(' ', '_') | uppercase]">{{'HORSES.PROFIL' | translate}}</a>
         </div>
     </div>
 </div>

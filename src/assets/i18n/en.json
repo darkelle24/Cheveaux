@@ -6,5 +6,9 @@
         "HORSES": "Horses",
         "INFO": "Breeding",
         "CONTACT": "Contact"
+    },
+    "HORSES": {
+        "LIST": "List of Horses",
+        "PROFIL": "Consult the file"
     }
 }

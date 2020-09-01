@@ -12,11 +12,11 @@ export class ServiceAllService {
 
   constructor(private http: HttpClient) { }
 
-  getAllChevaux(): Observable<any> {
-    return this.http.get<any>('assets/infoChevaux.json');
+  getAllChevaux(lang: string = 'en'): Observable<any> {
+    return this.http.get<any>('assets/data/' + lang + '/infoChevaux.json');
   }
 
   getOneCheval(name: string, lang: string = 'en'): Observable<any> {
-    return this.http.get<any>('assets/chevalInfo/' + lang + '/' + name.replace(' ', '_').toLowerCase() + '.json');
+    return this.http.get<any>('assets/data/' + lang + '/chevalInfo/' + name.replace(' ', '_').toLowerCase() + '.json');
   }
 }

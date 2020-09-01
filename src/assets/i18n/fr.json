@@ -6,5 +6,9 @@
         "HORSES": "Chevaux",
         "INFO": "L'élevage",
         "CONTACT": "Contact"
+    },
+    "HORSES": {
+        "LIST": "Liste des Chevaux",
+        "PROFIL": "Consulter la fiche"
     }
 }

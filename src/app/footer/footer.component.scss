@@ -28,6 +28,11 @@ a {
     color: #fff;
 }
 
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 footer a:hover {
     color: #cfaa7e;
 }
