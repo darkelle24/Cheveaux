@@ -8,6 +8,7 @@ import { InfoComponent } from './body/info/info.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ChevalInfoComponent } from './body/cheveaux/cheval/cheval-info/cheval-info.component';
 import { ContactComponent } from './body/contact/contact.component';
+import { NewsComponent } from './body/news/news.component';
 
 const appRoutes: Routes = [
     { path: 'chevaux', component: CheveauxComponent, resolve: {resolvedProject: ProjectsResolverService} },
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
     { path: 'accueil', component: AcceuilComponent, resolve: {resolvedProject: ProjectsResolverService} },
     { path: 'info', component: InfoComponent, resolve: { resolvedProject: ProjectsResolverService } },
     { path: 'contact', component: ContactComponent, resolve: {resolvedProject: ProjectsResolverService} },
+    { path: 'actualité', component: NewsComponent, resolve: { resolvedProject: ProjectsResolverService } },
     { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent },
 ];

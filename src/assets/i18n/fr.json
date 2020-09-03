@@ -9,6 +9,12 @@
     },
     "HORSES": {
         "LIST": "Liste des Chevaux",
-        "PROFIL": "Consulter la fiche"
+        "PROFIL": "Consulter la fiche",
+        "HORSE_PROFIL": {
+            "BIRTH": "Naissance",
+            "SEX": "Sexe",
+            "RACE": "Race",
+            "COLOR": "Robe"
+        }
     }
 }

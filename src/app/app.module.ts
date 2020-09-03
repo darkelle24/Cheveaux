@@ -30,6 +30,7 @@ import { ContactComponent } from './body/contact/contact.component';
 import { ContactInfoComponent } from './body/contact/contact-info/contact-info.component';
 import { ContactEmailComponent } from './body/contact/contact-email/contact-email.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { NewComponent } from './body/news/new/new.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -56,6 +57,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactInfoComponent,
     ContactEmailComponent,
     SpinnerComponent,
+    NewComponent,
   ],
   imports: [
     BrowserModule,

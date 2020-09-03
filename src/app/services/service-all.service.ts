@@ -19,4 +19,8 @@ export class ServiceAllService {
   getOneCheval(name: string, lang: string = 'en'): Observable<any> {
     return this.http.get<any>('assets/data/' + lang + '/chevalInfo/' + name.replace(' ', '_').toLowerCase() + '.json');
   }
+
+  getNews(lang: string = 'en'): Observable<any> {
+    return this.http.get<any>('assets/data/' + lang + '/news.json');
+  }
 }

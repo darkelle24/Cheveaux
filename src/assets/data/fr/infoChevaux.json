@@ -17,6 +17,15 @@
     "sexe": "Hongre",
     "srcimage": "assets/img/ptdr.jpg"
 }, {
+    "name": "Mighty Mandacou Z",
+    "pere": "Mighty Magic",
+    "pereMere": "Le Triton",
+    "naissance": 2015,
+    "race": "Zangersheide",
+    "robe": "Bai foncé",
+    "sexe": "Femelle",
+    "srcimage": "assets/img/ptdr.jpg"
+}, {
     "name": "San Real De Mandacou",
     "pere": "Sandreo",
     "pereMere": "Wolkentanz II",

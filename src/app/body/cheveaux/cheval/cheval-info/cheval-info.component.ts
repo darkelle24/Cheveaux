@@ -46,6 +46,8 @@ export class ChevalInfoComponent implements OnInit {
   }
 
   getOffset(element: ElementRef): number {
+    if (element === undefined)
+      return -1
     return element.nativeElement.offsetTop
   }
 

@@ -9,6 +9,12 @@
     },
     "HORSES": {
         "LIST": "List of Horses",
-        "PROFIL": "Consult the file"
+        "PROFIL": "Consult the file",
+        "HORSE_PROFIL": {
+            "BIRTH": "Birth",
+            "SEX": "Sex",
+            "RACE": "Race",
+            "COLOR": "Color"
+        }
     }
 }

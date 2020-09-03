@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceAllService } from '../../services/service-all.service';
-import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import {
   trigger,
@@ -41,7 +40,7 @@ export class CheveauxComponent implements OnInit {
   chevaux: any[] = null;
   loading = true
 
-  constructor(private projetService: ServiceAllService, private route: ActivatedRoute, private translate: TranslateService) { }
+  constructor(private projetService: ServiceAllService, private translate: TranslateService) { }
 
   ngOnInit() {
     this.loading = true
@@ -60,7 +59,6 @@ export class CheveauxComponent implements OnInit {
   }
 
   getData() {
-    const name = this.route.snapshot.params.name;
     this.projetService.getAllChevaux(this.translate.currentLang)
       .subscribe(
         (data: any) => {
