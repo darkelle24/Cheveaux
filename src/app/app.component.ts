@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   title = 'Elevage de Mandacou';
   toogle = false
+  acceuil = false
 
   constructor(private router: Router, translate: TranslateService) {
 
@@ -20,8 +21,10 @@ export class AppComponent implements OnInit {
 
     this.router.events.subscribe((event: Event) => {
         if (event instanceof NavigationStart) {
+          this.acceuil = false
           if (event.url.includes('accueil') || event.url === '/') {
             document.body.style.backgroundColor = '#a5d152';
+            this.acceuil = true
           } else if (event.url.includes('contact')) {
             document.body.style.backgroundColor = '#f6f5fb';
           } else {
